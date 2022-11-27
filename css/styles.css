@@ -1,0 +1,88 @@
+body 
+  {
+  font-family: Arial, Helvetica, sans-serif;
+  }
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin: 5px 0 30px 12px 0;
+}
+.input {
+  margin-bottom: 24px;
+}
+
+.optionGroup {
+  margin-bottom: 15px;
+}
+.btn {
+  margin-top: 4px;
+  text-align: center;
+}
+.btn button {
+  background-color: rgb(168, 236, 168);
+  width: 100%;
+  height: 50px;
+}
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+.containerList {
+    font-weight: bold;
+}
+.containerList, .contentType{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: auto;
+  text-align: center;
+  border: 1px solid rgba(44, 46, 48, 0.8);
+  width: 500px;
+}
+.contentType div {
+  border-bottom: 1px solid #000;
+}
+.erase {
+    background-color: red;
+    color: #FFF;
+    width: fit-content;
+    margin: auto;
+    border-bottom: 1px solid #000;
+}
+.dailySpends {
+    text-align: center;
+    margin-top: 23px;
+    display: grid;
+  }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+
+    <title>Inico | Gastos</title>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <label for="spend">Gastos</label>
+            <input class="input" type="text" name="spend" id="spend">
+
+            <label for="lname">Tipo:</label>
+            <select class="optionGroup">
+                <option value="choice">Elija</option>
+                <option value="daily">Diaria</option>
+                <option value="weekly">Semanal</option>
+                <option value="monthly">Mensual</option>
+                <option value="bimonthly">Bimestral</option>
+                <option value="annual">Anual</option>
+            </select>
+
+            <label for="descr">Descripción</label>
+            <textarea id="descr" name="descr" placeholder="Describa.." style="height:200px"></textarea>
+
+            <label for="date">Fecha</label>
+            <input type="date" name="date" id="date" ><br><br>
+
+            <label for="mount">Monto</label>
+            <input type="text" name="mount" id="mount" >
+
+            <div class="btn">
+                <button type="button" id="send">Añadir</button>
+            </div>
+        </form>
+    </div>
+
+    <h2>Chequeo de gastos</h2>
+    <div class="containerList">
+        <div>Tipo</div>
+        <div>Descripción</div>
+        <div>Fecha</div>
+        <div>Monto</div>
+        <div>Control</div>
+    </div>
+    <div class="contentType">
+        
+    </div>
+    
+    <script src="./js/script.js"></script>
+    </body>
+</html>
