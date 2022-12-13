@@ -1,81 +1,33 @@
-const spend = document.getElementById('spend');
-const optionGroup = document.querySelector('.optionGroup');
-const descrip = document.getElementById('descr');
-const date = document.getElementById('date');
-const mount = document.getElementById('mount');
-const sendBtn = document.getElementById('send');
-
-const contentType = document.querySelector('.contentType');
-
-
-optionGroup.addEventListener('change', dropDownMenu);
-
-function dropDownMenu() {
-    switch (optionGroup.value) {
-        case "daily":
-            console.log('Diaria')
-            return 'Diaria';
-        case "weekly":
-            console.log('Semanal');
-            return 'Semanal';
-        case "monthly":
-            console.log('Mensual');
-            return 'Mensual';
-        case "bimonthly":
-            console.log('Bimestral');
-            return 'Bimestral';
-        case "annual":
-            console.log('Anual');
-            return 'Anual';
-        default:
-            console.log('Elección?');
+class Producto {
+    constructor (nombre, precio, id) {
+      this.nombre = nombre;
+      this.precio = precio;
+      this.id = id
     }
-}
-
-
-sendBtn.addEventListener('click', () => {
-
-    const totalSpends = [];
-
-    const generalSpends = {
-        gastos: spend.value,
-        elecc: dropDownMenu(),
-        desc: descrip.value.toUpperCase(),
-        fecha: date.value,
-        monto: parseFloat(mount.value)
+  }
+  
+  const remera = new Producto ("Remera Vatic", 2500, 1);
+  const pantalon = new Producto ("Pantalon", 8000, 2);
+  const gorra = new Producto ("Gorra", 3000, 3);
+  const medias = new Producto ("Medias", 1500, 4);
+  
+  const articulos = [remera, pantalon, gorra, medias];
+  
+  const arrayProductos = [];
+  
+  function elegirProducto () {
+    let eleccionUser = parseInt(prompt("Escriba el número del producto que desea: "));
+    let productoElegido = articulos.find (el => el.id === eleccionUser);
+    console.log(productoElegido);
+    if (productoElegido === undefined) {
+      alert("Ingrese un número válido por favor");
+      elegirProducto();
     }
-
-    totalSpends.push(generalSpends);
-
-    for (let gasto of totalSpends) {
-        console.log(gasto.gastos);
-
-
-        const spendTypeDiv = document.createElement('div');
-        spendTypeDiv.innerText = gasto.elecc;
-
-        const spendDescrp = document.createElement('div');
-        spendDescrp.innerText = gasto.desc;
-
-        const spendDate = document.createElement('div');
-        spendDate.innerText = gasto.fecha;
-
-        const spendMount = document.createElement('div');
-        spendMount.innerText = `$ ${gasto.monto}`;
-
-        const spendButton = document.createElement('button');
-        spendButton.type = 'button';
-        spendButton.classList.add('erase');
-        spendButton.id = 'erase';
-        spendButton.innerText = 'Borrar';  
-
-
-        contentType.append(spendTypeDiv, spendDescrp, spendDate, spendMount, spendButton);
-        
-        
-        spendButton.addEventListener('click', () => {
-            contentType.remove();
-        });
-
-    }
-});
+    arrayProductos.push(productoElegido.precio);
+  }
+  
+  function finalizarCompra () {
+    let totalPrecio = arrayProductos.reduce((acumulador, producto) => acumulador + producto, 0);
+    alert("El total de su compra es " + totalPrecio + "$")
+    alert("Gracias por elegir nuestra tienda para adquirir ropa =)")
+  };

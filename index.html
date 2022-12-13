@@ -1,57 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
-
-    <title>Inico | Gastos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Tienda Online - RP</title>
 </head>
 <body>
-    <div class="container">
-        <form action="">
-            <label for="spend">Gastos</label>
-            <input class="input" type="text" name="spend" id="spend">
+<div class="container-fluid">
+  
+  <h1>Ropa Digital</h1>
 
-            <label for="lname">Tipo:</label>
-            <select class="optionGroup">
-                <option value="choice">Elija</option>
-                <option value="daily">Diaria</option>
-                <option value="weekly">Semanal</option>
-                <option value="monthly">Mensual</option>
-                <option value="bimonthly">Bimestral</option>
-                <option value="annual">Anual</option>
-            </select>
+  <h4>Productos Disponibles: </h4>
+  <ol>
+    <li>Remera Vatic - 2500$</li>
+    <li>Pantalon - 8000$</li>
+    <li>Gorra - 3000$</li>
+    <li>Medias - 1500$</li>
+  </ol>
 
-            <label for="descr">Descripción</label>
-            <textarea id="descr" name="descr" placeholder="Describa.." style="height:200px"></textarea>
+  <h4>Presione para comprar y agregar productos a su carrito: </h4>
+  <button onclick="elegirProducto()"> Comprar </button>
 
-            <label for="date">Fecha</label>
-            <input type="date" name="date" id="date" ><br><br>
+  <button onclick="finalizarCompra()"> Finalizar compra </button>
 
-            <label for="mount">Monto</label>
-            <input type="text" name="mount" id="mount" >
+  </div>
 
-            <div class="btn">
-                <button type="button" id="send">Añadir</button>
-            </div>
-        </form>
-    </div>
-
-    <h2>Chequeo de gastos</h2>
-    <div class="containerList">
-        <div>Tipo</div>
-        <div>Descripción</div>
-        <div>Fecha</div>
-        <div>Monto</div>
-        <div>Control</div>
-    </div>
-    <div class="contentType">
-        
-    </div>
-    
-    <script src="./js/script.js"></script>
-    </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
